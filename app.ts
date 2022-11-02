@@ -1,36 +1,20 @@
-// const person: {
-//   name: string;
-//   age: number; 
-// } 
-
-// const person:{
-//   name: string;
-//   age: number;
-//   hobbies: string[];
-//   role: [number, string]
-
-// } = {
-//   name : 'juyoung',
-//   age: 27,
-//   hobbies:['Sports','Cooking'],
-//   role : [2,'author']
-// };
-
-enum Role { ADMIN='ADMIN', READ_ONLY=100, AUTHOR='AUTHOR'};
-
-const person = {
-  name : 'juyoung',
-  age: 27,
-  hobbies:['Sports','Cooking'],
-  role: Role.ADMIN,
+function combine(input1: number | string,input2:number | string){
+  let result;
+  if(typeof input1 === 'number' && typeof input2 === 'number'){
+  result = input1 + input2;
+} else {
+  result = input1.toString() + input2.toString();
+}
+return result
 }
 
+const number1 = 30;
+const number2 = 26;
 
-let favoriteActivities: string[];
-favoriteActivities = ['Sports']
+const combinedAges = combine(number1, number2);
+console.log(combinedAges);
 
-if(person.role === Role.AUTHOR){
-  console.log('is author');
-}
+const combinedNames = combine('Max', 'Anna');
+console.log(combinedNames);
 
- 
+const literal = "ring";
